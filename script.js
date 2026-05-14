@@ -1,4 +1,74 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById("zoom-container");
+    const image = document.getElementById("main-product-image");
+    const lens = document.getElementById("zoom-lens");
+    const preview = document.getElementById("zoom-preview");
+
+    const zoomLevel = 2.5;
+
+    container.addEventListener("mouseenter", () => {
+
+        lens.style.opacity = "1";
+
+        preview.style.display = "block";
+
+        preview.style.backgroundImage =
+            `url(${image.src})`;
+    });
+
+    container.addEventListener("mouseleave", () => {
+
+        lens.style.opacity = "0";
+
+        preview.style.display = "none";
+    });
+
+    container.addEventListener("mousemove", moveLens);
+
+    function moveLens(e) {
+
+        const rect = container.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const lensWidth = lens.offsetWidth;
+        const lensHeight = lens.offsetHeight;
+
+        /* center lens */
+
+        let lensX = x - lensWidth / 2;
+        let lensY = y - lensHeight / 2;
+
+        /* prevent overflow */
+
+        lensX = Math.max(
+            0,
+            Math.min(lensX, rect.width - lensWidth)
+        );
+
+        lensY = Math.max(
+            0,
+            Math.min(lensY, rect.height - lensHeight)
+        );
+
+        /* move lens */
+
+        lens.style.left = lensX + "px";
+        lens.style.top = lensY + "px";
+
+        /* zoom preview */
+
+        const bgX =
+            (lensX / rect.width) * 100;
+
+        const bgY =
+            (lensY / rect.height) * 100;
+
+        preview.style.backgroundPosition =
+            `${bgX}% ${bgY}%`;
+    }
+
     const topbar = document.getElementById("sticky-topbar");
 
     let lastScroll = 0;

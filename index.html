@@ -84,23 +84,21 @@
                 </div>
 
                 <!-- MAIN IMAGE -->
-                <div class="main-image-container" id="zoom-container">
+                <div class="image-zoom-wrapper">
 
-                    <button class="carousel-arrow left-arrow" type="button" aria-label="Previous image">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m15 18-6-6 6-6" />
-                        </svg>
-                    </button>
+                    <!-- MAIN IMAGE -->
+                    <div class="main-image-container" id="zoom-container">
 
-                    <img src="assets/image2.png" alt="Premium HDPE Pipe" id="main-product-image" class="zoom-image" />
+                        <!-- CURSOR LENS -->
+                        <div class="zoom-lens" id="zoom-lens"></div>
 
-                    <button class="carousel-arrow right-arrow" type="button" aria-label="Next image">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m9 18 6-6-6-6" />
-                        </svg>
-                    </button>
+                        <img src="assets/image2.png" alt="Premium HDPE Pipe" id="main-product-image"
+                            class="zoom-image" />
+
+                    </div>
+
+                    <!-- RIGHT SIDE ZOOM PREVIEW -->
+                    <div class="zoom-preview" id="zoom-preview"></div>
 
                 </div>
 
