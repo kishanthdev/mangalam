@@ -1,19 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const topbar = document.getElementById("sticky-topbar");
 
-    const topbar = document.getElementById('sticky-topbar');
-    const header = document.querySelector('.navbar');
+    let lastScroll = 0;
+    const showAfter = 200;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 600) {
-            topbar.classList.add('is-sticky');
-            header.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
-        } else {
-            topbar.classList.remove('is-sticky');
-            header.style.boxShadow = 'none';
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        // Hide at top
+        if (currentScroll <= showAfter) {
+            topbar.classList.remove("is-sticky");
+            return;
         }
+
+        // Scrolling down → show sticky header
+        if (currentScroll > lastScroll) {
+            topbar.classList.add("is-sticky");
+        }
+        // Scrolling up → hide sticky header
+        else {
+            topbar.classList.remove("is-sticky");
+        }
+
+        lastScroll = currentScroll;
     });
 
-   
     const zoomContainer = document.getElementById('zoom-container');
     const zoomImage = document.getElementById('main-product-image');
 
@@ -87,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-   
+
     const appGrid = document.querySelector('.app-grid');
     const nextBtn = document.querySelector('.arrow-btn[aria-label="Next"]');
     const prevBtn = document.querySelector('.arrow-btn[aria-label="Previous"]');
@@ -150,13 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-window.changeImage = function(btn) {
+window.changeImage = function (btn) {
     const mainImg = document.getElementById('main-product-image');
     const imageSrc = btn.getAttribute('data-image');
-    
+
     if (mainImg && imageSrc) {
         mainImg.src = imageSrc;
-        
+
         document.querySelectorAll('.thumb-wrapper').forEach(w => w.classList.remove('active'));
         btn.classList.add('active');
     }
