@@ -3455,3 +3455,110 @@ h4 {
         font-size: 12px;
     }
 }
+
+/* =========================================
+   FEATURES SECTION RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .built-to-last {
+        padding: 60px 0;
+    }
+
+    .built-to-last-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        margin-bottom: 32px;
+    }
+
+    .built-to-last-header .section-title {
+        font-size: 2rem;
+
+        line-height: 1.2;
+
+        margin-bottom: 14px;
+    }
+
+    .built-to-last-header .section-subtitle {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    /* ONE BY ONE CARDS */
+    .features-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    /* BOXY CARD DESIGN */
+    .feature-card {
+        padding: 22px 18px;
+
+        border-radius: 20px;
+
+        border: 1px solid #E5E7EB;
+
+        background: #FFFFFF;
+
+        box-shadow:
+            0 4px 12px rgba(0, 0, 0, 0.04);
+
+        gap: 14px;
+    }
+
+    .feature-icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+
+        line-height: 1.4;
+    }
+
+    .feature-desc {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .text-center {
+        margin-top: 28px !important;
+    }
+
+    .text-center .btn {
+        width: 100%;
+    }
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .built-to-last-header .section-title {
+        font-size: 1.7rem;
+    }
+
+    .feature-card {
+        padding: 18px 16px;
+
+        border-radius: 18px;
+    }
+
+    .feature-title {
+        font-size: 15px;
+    }
+
+    .feature-desc {
+        font-size: 12px;
+    }
+}
