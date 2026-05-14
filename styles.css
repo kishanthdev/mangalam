@@ -1,4 +1,3 @@
-
 :root {
     --primary: #312E81;
     --primary-dark: #1E1B4B;
@@ -196,10 +195,11 @@ h4 {
 
 @media (max-width: 800px) {
     .sticky-nav-row {
-        display: none; 
+        display: none;
     }
+
     .sticky-product-text .sticky-title {
-        display: none; 
+        display: none;
     }
 }
 
@@ -574,15 +574,9 @@ h4 {
 
 .logos-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    opacity: 0.8;
     gap: 40px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: 8px;
 }
 
 .logos-container::-webkit-scrollbar {
@@ -590,15 +584,10 @@ h4 {
 }
 
 .partner-logo {
-    width: 140px; 
-    height: 50px;
-    max-width: 100%;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
     object-fit: contain;
-    filter: grayscale(1);
-    opacity: 1;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-    scroll-snap-align: start;
 }
 
 
@@ -1542,26 +1531,50 @@ h4 {
 }
 
 .res-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     max-width: 900px;
     margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 4px 0;
 }
 
 .res-item {
-    padding: 24px 32px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.2s;
+    padding: 8px 14px;
+    /* reduced spacing */
 }
 
-.res-item:hover {
-    background: var(--bg-light);
+.res-name {
+    font-size: 14px;
+    /* smaller text */
+    font-weight: 500;
+    color: #222;
+}
+
+.res-download-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #003366;
+    /* dark blue */
+    text-decoration: none;
+}
+
+.res-download-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #003366;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.res-download-link:hover {
+    color: #001f4d;
 }
 
 .res-title-wrap {
@@ -1600,7 +1613,7 @@ h4 {
 }
 
 .cta-box {
-    background: #2B3990; 
+    background: #2B3990;
     border-radius: 32px;
     padding: 80px 100px;
     color: white;
@@ -2077,7 +2090,8 @@ h4 {
     }
 
     .sticky-nav-row .nav-links {
-        display: none; /* Simplify sticky header on small laptops */
+        display: none;
+        /* Simplify sticky header on small laptops */
     }
 
     .cta-box {
@@ -2145,7 +2159,8 @@ h4 {
     }
 
     .sticky-nav-row {
-        display: none; /* Hide primary nav row on mobile sticky header */
+        display: none;
+        /* Hide primary nav row on mobile sticky header */
     }
 
     .sticky-product-row {
@@ -2153,7 +2168,8 @@ h4 {
     }
 
     .sticky-product-thumb {
-        display: none; /* Remove thumbnail to save space */
+        display: none;
+        /* Remove thumbnail to save space */
     }
 
     .sticky-title {
@@ -2226,7 +2242,7 @@ h4 {
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .app-grid {
         gap: 20px;
         width: calc(100% + 48px);
@@ -2234,7 +2250,7 @@ h4 {
         padding-left: 24px;
         padding-right: 24px;
     }
-    
+
     .app-card {
         width: 80vw;
         max-width: 320px;
@@ -2247,7 +2263,8 @@ h4 {
         overflow-x: auto;
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
-        padding-bottom: 16px; /* give some room for the scrollbar */
+        padding-bottom: 16px;
+        /* give some room for the scrollbar */
         width: calc(100% + 48px);
         margin-left: -24px;
         padding-left: 24px;
@@ -2278,7 +2295,8 @@ h4 {
     }
 
     /* Process */
-    .process-tabs-container, .process-divider {
+    .process-tabs-container,
+    .process-divider {
         display: none;
     }
 
@@ -2438,7 +2456,8 @@ h4 {
 
     /* Sticky Header Tiny Mobile */
     .sticky-product-text .sticky-title {
-        display: none; /* Only show price on tiny screens */
+        display: none;
+        /* Only show price on tiny screens */
     }
 
     .sticky-product-info-group {
@@ -2478,7 +2497,7 @@ h4 {
         justify-content: center;
     }
 
-   
+
     .logos-container {
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -2493,7 +2512,7 @@ h4 {
         max-width: 120px;
     }
 
- 
+
     .table-container {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -2505,12 +2524,12 @@ h4 {
         font-size: 0.82rem;
     }
 
-   
+
     .feature-card {
         padding: 24px 20px;
     }
 
-  
+
     .catalogue-banner {
         flex-direction: column;
         text-align: center;
@@ -2542,7 +2561,7 @@ h4 {
         padding: 24px 16px !important;
     }
 
-  
+
     .app-grid {
         grid-template-columns: 1fr;
     }
