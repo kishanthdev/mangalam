@@ -1,3 +1,7 @@
+/* =========================================
+   CSS VARIABLES & THEME TOKENS
+   Defines global colors, spacing, and layout
+   ========================================= */
 :root {
     --primary: #312E81;
     --primary-dark: #1E1B4B;
@@ -40,6 +44,9 @@ body {
     overflow-x: hidden;
 }
 
+/* =========================================
+   TYPOGRAPHY & UTILITY CLASSES
+   ========================================= */
 a {
     text-decoration: none;
     color: inherit;
@@ -86,6 +93,9 @@ h4 {
 }
 
 
+/* =========================================
+   BUTTON COMPONENTS
+   ========================================= */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -122,7 +132,9 @@ h4 {
     border-color: var(--text-light);
 }
 
-/* Professional Sticky Header */
+/* =========================================
+   STICKY TOPBAR / HEADER
+   ========================================= */
 .topbar {
     position: fixed;
     top: 0;
@@ -208,7 +220,9 @@ h4 {
     }
 }
 
-/* Navbar */
+/* =========================================
+   MAIN NAVIGATION (NAVBAR)
+   ========================================= */
 .navbar {
     background-color: var(--bg-white);
     border-bottom: 1px solid var(--border);
@@ -266,7 +280,9 @@ h4 {
     margin-top: 2px;
 }
 
-/* Breadcrumb */
+/* =========================================
+   HERO SECTION & BREADCRUMB
+   ========================================= */
 .breadcrumb {
     display: flex;
     align-items: start;
@@ -638,7 +654,9 @@ h4 {
     background: #F9FAFB;
 }
 
-/* Trust Bar Refinement */
+/* =========================================
+   TRUST BAR / PARTNERS SECTION
+   ========================================= */
 .trust-bar {
     padding: 0px;
     text-align: center;
@@ -693,6 +711,9 @@ h4 {
 }
 
 
+/* =========================================
+   TECHNICAL SPECIFICATIONS SECTION
+   ========================================= */
 .tech-specs {
     background-color: #111827;
     color: white;
@@ -756,6 +777,9 @@ h4 {
     background: rgba(255, 255, 255, 0.05);
 }
 
+/* =========================================
+   FEATURES ("BUILT TO LAST") SECTION
+   ========================================= */
 .built-to-last {
     padding: 100px 0;
     background: #FFFFFF;
@@ -835,7 +859,9 @@ h4 {
     margin: 0;
 }
 
-/* FAQ Redesign */
+/* =========================================
+   FAQ & CATALOGUE SECTION
+   ========================================= */
 .faq-section {
     padding: 30px 0;
     background: #FFFFFF;
@@ -999,6 +1025,9 @@ h4 {
     display: none;
 }
 
+/* =========================================
+   APPLICATIONS SECTION
+   ========================================= */
 .applications-section {
     padding: 100px 0 0;
     background: #F9FAFB;
@@ -1152,7 +1181,9 @@ h4 {
     color: #E5E7EB;
 }
 
-/* Manufacturing Process Redesign */
+/* =========================================
+   MANUFACTURING PROCESS SECTION
+   ========================================= */
 .process-section {
     padding: 60px 0 100px;
     background: #F9FAFB;
@@ -1380,7 +1411,9 @@ h4 {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Testimonials Section */
+/* =========================================
+   TESTIMONIALS (STATS) SECTION
+   ========================================= */
 .stats-section {
     padding: 100px 0;
     background: #fff;
@@ -1485,7 +1518,9 @@ h4 {
     color: #9CA3AF;
 }
 
-/* Portfolio */
+/* =========================================
+   PORTFOLIO SECTION
+   ========================================= */
 .portfolio-section {
     padding: 100px 0;
 }
@@ -1604,7 +1639,9 @@ h4 {
     border-radius: 10px;
 }
 
-/* Resources */
+/* =========================================
+   RESOURCES & DOWNLOADS SECTION
+   ========================================= */
 .resources-section {
     padding: 100px 0;
 }
@@ -1687,6 +1724,9 @@ h4 {
 }
 
 
+/* =========================================
+   CALL TO ACTION (CTA) SECTION
+   ========================================= */
 .cta-section {
     padding: 80px 0;
 }
@@ -1788,7 +1828,9 @@ h4 {
     transform: translateY(-2px);
 }
 
-/* Footer */
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
 .footer {
     background: #F9FAFB;
     border-top: 1px solid #E5E7EB;
@@ -1929,7 +1971,9 @@ h4 {
 /* Breadcrumb */
 
 
-/* Modals */
+/* =========================================
+   MODALS SECTION
+   ========================================= */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -2132,7 +2176,9 @@ h4 {
     font-size: 0.95rem;
 }
 
-/* Responsive Overrides */
+/* =========================================
+   RESPONSIVE DESIGN OVERRIDES
+   ========================================= */
 @media (max-width: 1200px) {
     .container {
         padding: 0 80px;
