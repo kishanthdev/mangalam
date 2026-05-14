@@ -287,7 +287,8 @@ h4 {
     display: flex;
     align-items: start;
     font-size: 0.875rem;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
 .bc-link {
@@ -303,6 +304,12 @@ h4 {
     color: #9CA3AF;
     margin: 0 8px;
     font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-hide {
+        display: none !important;
+    }
 }
 
 .bc-active {
@@ -2439,7 +2446,8 @@ h4 {
     }
 
     .breadcrumb {
-        justify-content: center;
+        justify-content: start;
+        margin-left: 30px;
     }
 
     .hero-actions {
